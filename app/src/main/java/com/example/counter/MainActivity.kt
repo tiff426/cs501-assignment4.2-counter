@@ -131,6 +131,7 @@ fun Counter(viewModel: MyViewModel = MyViewModel(), autoOn: Boolean) {
 
     Column() {
         Text("$currCount")
+        Text(if(autoOn){"status: auto is on"}else{"status: auto is off"})
         Button(onClick = { viewModel.increment() }) {
             Text("+1")
         }
